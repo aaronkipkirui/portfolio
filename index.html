@@ -3,256 +3,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Portfolio of Aron Kemoi - Computer Science Professional specializing in IT Support, Data Analytics, Virtual Assistance, and Full Stack Development.">
+    <meta name="author" content="Aron Kemoi">
+    <meta name="theme-color" content="#0a0d14">
+    <title>Aron Kemoi | IT Support • Data Analyst • Virtual Assistant</title>
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <!-- home page -->
-    <div id="header">
+
+    <!-- ==================== Navigation Bar ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#header" class="nav-logo" aria-label="Aron Kemoi Home">
+                <span class="logo-text">KEMOI</span><span class="logo-accent">.</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <button class="menu-close" id="menuClose" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <li><a href="#header" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="mobile-cta-li">
+                    <a href="#contact" class="btn btn-primary nav-link mobile-cta-btn">
+                        <span>Let's Talk</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <a href="#contact" class="nav-cta-btn">
+                    <span>Let's Talk</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Backdrop -->
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+
+    <!-- ==================== Hero / Header Section ==================== -->
+    <header id="header" class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container">
-            <nav>
-                <h1>
-                    <ul>
-                        <li>K</li>
-                        <li>E</li>
-                        <li>M</li>
-                        <li>O</li>
-                        <li>I</li>
-                    </ul>
+            <div class="hero-content">
+                <!-- Status Badge -->
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for Opportunities • Nairobi, Kenya</span>
+                </div>
+
+                <p class="hero-eyebrow">IT Support Specialist • Data Analyst • Virtual Assistant</p>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">ARON KEMOI</span><br>from Nairobi, Kenya
                 </h1>
+                <p class="hero-desc">
+                    A versatile Computer Science professional bridging mission-critical IT infrastructure, advanced data analytics, and modern remote operations to drive scalable business impact.
+                </p>
 
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contacts</a></li>
-                    <i class="fa fa-times"onclick="closemenu()"></i>
-                </ul>
-                <i class="fa fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>IT SUPPORT | DATA ANALYST | VIRTUAL ASSISTANT</p>
-                <h1>Hi, I'm <span>ARON KEMOI</span> <br>from Nairobi, Kenya</h1>
+                <!-- Call to Action Buttons -->
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <i class="fa-solid fa-briefcase"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="images/aron_kemoi_cv.pdf" download class="btn btn-glass">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download CV
+                    </a>
+                </div>
+
+                <!-- Highlights Strip -->
+                <div class="hero-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-num">3+ <span>Years</span></span>
+                        <span class="highlight-label">Technical & IT Experience</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-num">ALX <span>Distinction</span></span>
+                        <span class="highlight-label">Virtual Assistance Certified</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-num">PERN <span>& BI</span></span>
+                        <span class="highlight-label">Full Stack & Data Insights</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <!-- about page -->
-    <div id="about">
+    <!-- ==================== About Section ==================== -->
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/photo_headshot.jpg">
+            <div class="about-grid">
+                <!-- Headshot Column -->
+                <div class="about-image-col">
+                    <div class="about-img-card">
+                        <img src="images/photo_headshot.jpg" alt="Aron Kemoi Headshot">
+                    </div>
+                    <div class="about-floating-badge">
+                        <i class="fa-solid fa-award"></i>
+                        <div>
+                            <div class="badge-title">ALX Distinction</div>
+                            <div class="badge-sub">Virtual Assistance</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>I am a versatile, technically proficient Computer Science professional with a 
-                        proven track record across IT infrastructure, customer support and currently expanding my capabilities into advanced data analytics.  
-                        Complementing this technical core is my distinction in Virtual Assistance from ALX Africa, 
-                        which refines my administrative strategy, communication and project coordination skills 
-                        for modern remote workflows.
+
+                <!-- Content & Tabs Column -->
+                <div class="about-content-col">
+                    <div class="section-header-left">
+                        <span class="section-tag">DISCOVER</span>
+                        <h2 class="sub-title">About Me</h2>
+                    </div>
+
+                    <p class="about-bio">
+                        I am a versatile, technically proficient Computer Science professional with a proven track record across IT infrastructure, customer support, and currently expanding my capabilities into advanced data analytics. Complementing this technical core is my distinction in Virtual Assistance from ALX Africa, which refines my administrative strategy, communication, and project coordination skills for modern remote workflows.
+                    </p>
+
+                    <!-- Tab Switcher -->
+                    <div class="tab-controls" role="tablist">
+                        <button class="tab-btn active" data-tab="skills" role="tab">
+                            <i class="fa-solid fa-laptop-code"></i> Skills
+                        </button>
+                        <button class="tab-btn" data-tab="experience" role="tab">
+                            <i class="fa-solid fa-briefcase"></i> Experience
+                        </button>
+                        <button class="tab-btn" data-tab="education" role="tab">
+                            <i class="fa-solid fa-graduation-cap"></i> Education
+                        </button>
+                    </div>
+
+                    <!-- Tab Panes -->
+                    <div class="tab-contents">
+                        <!-- Skills Tab -->
+                        <div class="tab-pane active" id="skills">
+                            <div class="skills-grid">
+                                <div class="skill-category-card">
+                                    <div class="skill-category-header">
+                                        <i class="fa-solid fa-server"></i>
+                                        <h4>IT Support</h4>
+                                    </div>
+                                    <p>System installation, network configuration, hardware diagnostics, endpoint security, user training and technical helpdesk support.</p>
+                                </div>
+                                <div class="skill-category-card">
+                                    <div class="skill-category-header">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                        <h4>Data Analytics</h4>
+                                    </div>
+                                    <p>Data ingestion, cleaning, interactive dashboard visualization, SQL querying, Excel modeling, Power BI, and Databricks.</p>
+                                </div>
+                                <div class="skill-category-card">
+                                    <div class="skill-category-header">
+                                        <i class="fa-solid fa-headset"></i>
+                                        <h4>Virtual Assistance</h4>
+                                    </div>
+                                    <p>Executive administrative strategy, calendar and inbox management, project coordination, and operational support for remote teams.</p>
+                                </div>
+                                <div class="skill-category-card">
+                                    <div class="skill-category-header">
+                                        <i class="fa-solid fa-code"></i>
+                                        <h4>Full Stack Dev</h4>
+                                    </div>
+                                    <p>PERN stack (PostgreSQL, Express, React, Node.js), Next.js, RESTful API architecture, Git version control, and database design.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience Tab -->
+                        <div class="tab-pane" id="experience">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-badge">Aug 2024 - Present</span>
+                                        <h3 class="timeline-title">IT Support Technician</h3>
+                                        <p class="timeline-subtitle">Pergamon Group Ltd</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-badge">Apr 2024 - Jul 2024</span>
+                                        <h3 class="timeline-title">IT Support Intern</h3>
+                                        <p class="timeline-subtitle">Pergamon Group Ltd</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Tab -->
+                        <div class="tab-pane" id="education">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-badge">2026 - Present</span>
+                                        <h3 class="timeline-title">Data Analytics & Full Stack (PERN)</h3>
+                                        <p class="timeline-subtitle">Udemy Professional Specializations</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-badge">2024</span>
+                                        <h3 class="timeline-title">Virtual Assistant (Graduated with Distinction)</h3>
+                                        <p class="timeline-subtitle">ALX Africa</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-dot"></span>
+                                    <div class="timeline-content">
+                                        <span class="timeline-badge">2019 - 2023</span>
+                                        <h3 class="timeline-title">BSc in Computer Science</h3>
+                                        <p class="timeline-subtitle">Chuka University</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Services Section ==================== -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">EXPERTISE</span>
+                <h2 class="sub-title">My Services</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: IT Support -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3>IT Support</h3>
+                        <p>Installing, configuring, and troubleshooting mission-critical ICT infrastructure, networks, and endpoint security to ensure continuous tech reliability and user satisfaction.</p>
+                    </div>
+                    <div class="service-tags">
+                        <span class="service-tag">Hardware & Networking</span>
+                        <span class="service-tag">Troubleshooting</span>
+                        <span class="service-tag">User Training</span>
+                    </div>
+                </div>
+
+                <!-- Service 2: Virtual Assistance -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3>Virtual Assistance</h3>
+                        <p>Expertly managing remote administrative workflows, project coordination and client communications to optimize executive productivity and streamline daily business operations.</p>
+                    </div>
+                    <div class="service-tags">
+                        <span class="service-tag">Workflow Optimization</span>
+                        <span class="service-tag">Calendar Management</span>
+                        <span class="service-tag">Communication</span>
+                    </div>
+                </div>
+
+                <!-- Service 3: Data Analytics -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3>Data Analytics</h3>
+                        <p>Transforming complex, raw datasets into actionable business insights through robust data cleaning, querying and interactive visualization using Excel, SQL, Power BI and Databricks.</p>
+                    </div>
+                    <div class="service-tags">
+                        <span class="service-tag">SQL & Queries</span>
+                        <span class="service-tag">Power BI</span>
+                        <span class="service-tag">Data Cleaning</span>
+                    </div>
+                </div>
+
+                <!-- Service 4: Full Stack Development -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon-box">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3>Full Stack Development</h3>
+                        <p>Designing and deploying responsive, scalable applications by seamlessly combining user-centric front-end interfaces with robust back-end architecture and secure database management.</p>
+                    </div>
+                    <div class="service-tags">
+                        <span class="service-tag">PERN Stack</span>
+                        <span class="service-tag">REST APIs</span>
+                        <span class="service-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Portfolio / My Work Section ==================== -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SHOWCASE</span>
+                <h2 class="sub-title">My Work</h2>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project 1: SDA Sabbath School App -->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="images/work-img-1.jpg" alt="SDA Sabbath School App">
+                        <span class="project-category-badge">Android App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SDA Sabbath School App</h3>
+                        <p class="project-desc">
+                            The app caters for daily devotional needs for an individual or group as they seek in-depth knowledge of God's love towards mankind. Audio has been integrated to support visually challenged users.
                         </p>
-
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Audio Integration</span>
+                            <span class="tech-tag">Accessibility</span>
                         </div>
-
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                
-                                <li><span>IT Support</span><br> System Installation, Configuration, User training and Support </li>
-                                <li><span>Data Analytics</span><br> Administrative Management, Calendar Management and Operational Support</li>
-                                <li><span>Virtual Assistance</span><br> Data ingestion, cleaning, interactive visualization and statistical modeling </li>
-                            </ul>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.music.sabbath" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                                <span>Google Play</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
-
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>Aug 2024 - Current</span> <br> IT Support Technician <br> Pergamon Group Ltd</li>
-                                <li><span>Apr 2024 - Jul 2024</span><br>  IT Support Intern <br> Pergamon Group Ltd</li>
-                                
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2026 - Current</span><br>Udemy <br> Data Analytics</li>
-                                <li><span>2026 - Current</span><br>Udemy <br> Full Stack Developer (PERN Stack)</li>
-                                <li><span>2024 - 2024</span><br>ALX Africa <br> Virtual Assistant</li>
-                                <li><span>2019 - 2023</span><br>Chuka University <br> Bsc Computer Science</li>
-                            </ul>
-                        </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- -----------------------services------------------------ -->
-
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                
-                    <h2>IT Support</h2>
-                    <p>Installing, configuring, and troubleshooting mission-critical ICT infrastructure, networks, and endpoint security to ensure continuous tech reliability and user satisfaction.</p>
-
-                        
+                    </div>
                 </div>
 
-                <div>
-                
-                    <h2>Virtual Assistance</h2>
-                    <p>Expertly managing remote administrative workflows, project coordination and client communications to optimize executive productivity and streamline daily business operations.</p>
-
-                        
-                </div>
-
-
-                <div>
-                
-                    <h2>Data Analytics</h2>
-                    <p>Transforming complex, raw datasets into actionable business insights through robust data cleaning, querying and interactive visualization using Excel, SQL, Power BI and Databricks.</p>
-
-                        
-                </div>
-
-                <div>
-                 
-                    <h2>Full Stack Development</h2>
-                    <p>Designing and deploying responsive, scalable applications by seamlessly combining user-centric front-end interfaces with robust back-end architecture and secure database management.</p>
-
-                        
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ------------------------------portfolio--------------------- -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/coding.jpg">
-                    <div class="layer">
-                        <h3>SDA Sabbath School App (JAVA)</h3>
-                        <p>The app cater for daily devotional needs for an individual or group as they seek in-depth knowledge of GOD'S love towards mankind. Audio has be added to this application to gather for the visually challenged.
+                <!-- Project 2: Harry Potter Characters -->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="images/coding.jpg" alt="Harry Potter Characters Project">
+                        <span class="project-category-badge">Web Application</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Harry Potter Characters</h3>
+                        <p class="project-desc">
+                            This project displays a catalog of Harry Potter characters, dynamically showcasing character profiles, names, house traits, and dates of birth on the homepage using live API integration.
                         </p>
-                        <a href="https://play.google.com/store/apps/details?id=com.music.sabbath" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://harry-potter-characters-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                                <span>Live Demo</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="work">
-                    <img src="images/coding.jpg">
-                    <div class="layer">
-                        <h3>Harry Potter Characters (NEXT JS With API)</h3>
-                        <p>This project displays a list of Harry Potter characters, showing their names and Date of Birth in the homepage from API data</p>
-                        <a href="https://harry-potter-characters-three.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <!-- Project 3: Backend PERN Project -->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="images/laptop_background.jpg" alt="PERN Stack Backend Project">
+                        <span class="project-category-badge">REST API Backend</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Backend Project (PERN Stack)</h3>
+                        <p class="project-desc">
+                            A containerized Node.js and Express REST API backend featuring PostgreSQL database integration, robust Joi request schema validation, and centralized error handling architecture.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Joi Validation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aaronkipkirui/postgres-backend" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                                <span>GitHub Repo</span>
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
-                    
-                    <img src="images/coding.jpg">
-                    <div class="layer">
-                        <h3>Backend project (PERN Stack)</h3>
-                        <p>This Node.js and Express REST API project delivers a containerized CRUD application featuring PostgreSQL integration, Joi schema validation and centralized error handling. </p>
-                        <a href="https://github.com/aaronkipkirui/postgres-backend" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-              
             </div>
 
-            <a href="https://github.com/aaronkipkirui/" class="btn" target="_blank">See More</a>
+            <!-- Bottom CTA Button -->
+            <div class="portfolio-cta">
+                <a href="https://github.com/aaronkipkirui/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i> See More Projects on GitHub
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- --------------------------contact--------------- -->
-    <div id="contact">
-
+    <!-- ==================== Contact Section ==================== -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <div class="row">
+            <div class="contact-grid">
+                <!-- Contact Info Side -->
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> aaronkipkirui015@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> +254708060692</p>
-                    <div class="social-icons">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/aron-k-kemoi-105273237/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <div class="section-header-left">
+                        <span class="section-tag">GET IN TOUCH</span>
+                        <h2 class="sub-title">Contact Me</h2>
                     </div>
-                    <a href="images/aron_kemoi_cv.pdf" download class="btn btn2">Download CV</a>
+
+                    <div class="contact-info-list">
+                        <!-- Email Card -->
+                        <a href="mailto:aaronkipkirui015@gmail.com" class="contact-info-card">
+                            <div class="contact-icon-box">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <div class="info-label">Email Address</div>
+                                <div class="info-val">aaronkipkirui015@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <!-- Phone Card -->
+                        <a href="tel:+254708060692" class="contact-info-card">
+                            <div class="contact-icon-box">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <div class="info-label">Call / WhatsApp</div>
+                                <div class="info-val">+254 708 060 692</div>
+                            </div>
+                        </a>
+
+                        <!-- Location Card -->
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <div class="info-label">Location</div>
+                                <div class="info-val">Nairobi, Kenya</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="social-links-wrapper">
+                        <h4 class="social-title">Follow & Connect</h4>
+                        <div class="social-icons-list">
+                            <a href="https://www.linkedin.com/in/aron-k-kemoi-105273237/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/aaronkipkirui/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Download CV Button -->
+                    <a href="images/aron_kemoi_cv.pdf" download class="btn btn-outline">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume (CV)
+                    </a>
                 </div>
+
+                <!-- Contact Form Side -->
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+                    <div class="contact-form-card">
+                        <form name="submit-to-google-sheet">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="Name" class="form-control" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="Email" class="form-control" placeholder="name@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea id="message" name="Message" class="form-control" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="btn btn-primary">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+
+                            <span id="msg" class="status-msg" role="status" aria-live="polite"></span>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>Copyright &copy Kemoi 2026</p>
+    </section>
+
+    <!-- ==================== Footer ==================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#header" class="nav-logo" aria-label="Back to top">
+                <span class="logo-text">KEMOI</span><span class="logo-accent">.</span>
+            </a>
+            
+            <p class="footer-copy">
+                Copyright &copy; 2026 Aron Kemoi. All rights reserved.
+            </p>
+
+            <ul class="footer-links">
+                <li><a href="#header" class="footer-link">Home</a></li>
+                <li><a href="#about" class="footer-link">About</a></li>
+                <li><a href="#services" class="footer-link">Services</a></li>
+                <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+                <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
         </div>
-    </div>
-    <script>
+    </footer>
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-        function opentab(tabname){
-            for (tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-
-            for (tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz79q0XKquOh8andNbgbcABpzFg7-gf4kxXhcEsvfwygdTsnsNLDLRWkXYkuOB_imjp_A/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg");
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                })
-            },3000)
-            form.reset()
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+    <!-- Interactive Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
