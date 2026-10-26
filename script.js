@@ -14,23 +14,54 @@ document.addEventListener('DOMContentLoaded', () => {
     function openMenu() {
         navMenu.classList.add('active');
         if (backdrop) backdrop.classList.add('active');
+        document.body.classList.add('menu-open');
         document.body.style.overflow = 'hidden';
     }
 
     function closeMenu() {
         navMenu.classList.remove('active');
         if (backdrop) backdrop.classList.remove('active');
+        document.body.classList.remove('menu-open');
         document.body.style.overflow = '';
     }
 
-    if (menuToggle) menuToggle.addEventListener('click', openMenu);
+    if (menuToggle) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openMenu();
+        });
+    }
     if (menuClose) menuClose.addEventListener('click', closeMenu);
     if (backdrop) backdrop.addEventListener('click', closeMenu);
 
+    // Make options work smoothly on click
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
             closeMenu();
+
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 50);
+                }
+            }
         });
+    });
+
+    // Close when tapping outside the drawer
+    document.addEventListener('click', (e) => {
+        if (navMenu && navMenu.classList.contains('active')) {
+            if (!navMenu.contains(e.target) && menuToggle && !menuToggle.contains(e.target)) {
+                closeMenu();
+            }
+        }
     });
 
     document.addEventListener('keydown', (e) => {
